@@ -23,7 +23,7 @@
 
 <body <?php if($view == 'index'): ?>class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}" <?php endif; ?>>
 	
-    <?php if($view == 'index'): ?>
+    <?php  if($view == 'index'): ?>
     <div class="loading-overlay">
 			<div class="bounce-loader">
 				<div class="bounce1"></div>
@@ -31,6 +31,5 @@
 				<div class="bounce3"></div>
 			</div>
 		</div>
-    <?php endif; ?>
-   <h1>Welcome home junior!</h1>
+    <?php  endif; ?>
     <?php include_once LAYOUTS.'nav.php'; ?>

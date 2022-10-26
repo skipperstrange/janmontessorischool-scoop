@@ -1,3 +1,3 @@
 <?php
 
-$pageTitle = "Scoop-PHP";
+$pageTitle = CLIENT_NAME;
