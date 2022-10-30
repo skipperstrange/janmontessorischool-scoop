@@ -1,10 +1,11 @@
 <?php
 
 function activeUrl(){
-    return $_GET['uri'];
+    return WEB_URL.$_GET['uri'];
 }
 
 function activeUri(){
+    return $_GET['uri'];
 }
 
 // strips out escape characters
@@ -38,7 +39,6 @@ function parse_params()
         } else {
             $params = array_merge($params, $_GET);
         }
-
     }
     return $params;
 }

@@ -3,7 +3,7 @@
 $metadata = [
     ['charset'=>"utf-8", 'http-equiv'=>"X-UA-Compatible",'content'=>"IE=edge"],
     
-    ['name'=>"keywords", 'content'=>"A simple procedural mvc framework for beginers"],
+    ['name'=>"keywords", 'content'=>"Childcare, nusery, school"],
     ['name'=>"viewport", 'content'=>"width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"],
     ['name'=>"author", 'content'=>"skipperstrange@gmail.com"]
 ];
@@ -28,7 +28,7 @@ $styles = [
 		["rel"=>"stylesheet", "href"=>CSS_PATH."theme-elements.css"],
 
 		// Skin CSS
-		["rel"=>"stylesheet", "href"=>CSS_PATH."skins/default.css"], 
+		//["rel"=>"stylesheet", "href"=>CSS_PATH."skins/default.css"], 
 
 		// Theme Custom CSS -->
 		["rel"=>"stylesheet", "href"=>CSS_PATH."custom.css"],

@@ -32,8 +32,8 @@ $navLinks = [
 ];
 
 $buttonLinks = [
-    'buy_insurance' =>[
-        'href' => "https://app.vanguardassurance.com/", 'target'=>'_blank', 'button'=>true, 'label'=>'', 'target'=> '_blank'  
+    'make_an_appointment' =>[
+        'href' => "", 'target'=>'_blank', 'button'=>true, 'label'=>'', 'target'=> '_blank'  
     ], 
 ];
 

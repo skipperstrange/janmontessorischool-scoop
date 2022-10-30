@@ -2,6 +2,7 @@
 
 define('CLIENT_NAME', 'Jan Montessori School');
 define('WEBSITE', '');
+define('STREET_ADDRESS', '');
 define('SLOGAN', '');
 define('SUPPORT_EMAIL', '');
 define('SUPPORT_CONTACT_1', '');

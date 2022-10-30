@@ -5,7 +5,11 @@ define("ROUTES", [
 ['url'=>'@^home$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
 //# controller:aztrasC view:index
-['url'=>'@^home\/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+['url'=>'@^home/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+
+//Contact Us
+['url'=>'@^contact-us$@', 'name'=>'', 'controller'=>'contact-us', 'view'=>'contact-us'],
+['url'=>'@^contact-us/$@', 'name'=>'', 'controller'=>'contact-us', 'view'=>'contact-us'],
 
 //# controller:aztrasC view:index
 ['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
