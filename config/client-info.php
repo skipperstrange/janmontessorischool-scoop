@@ -2,11 +2,11 @@
 
 define('CLIENT_NAME', 'Jan Montessori School');
 define('WEBSITE', '');
-define('STREET_ADDRESS', '');
+define('STREET_ADDRESS', 'Oyibi Pillar II');
 define('SLOGAN', '');
-define('SUPPORT_EMAIL', '');
-define('SUPPORT_CONTACT_1', '');
-define('SUPPORT_CONTACT_2', '');
+define('SUPPORT_EMAIL', 'janmontessorischool@outlook.com');
+define('SUPPORT_CONTACT_1', '+233205081774');
+define('SUPPORT_CONTACT_2', '+233555202047');
 
 //Contacts witout spaces
 define('SUPPORT_CONTACT_1_CLEAN', '');

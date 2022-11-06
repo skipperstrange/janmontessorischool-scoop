@@ -11,6 +11,15 @@ define("ROUTES", [
 ['url'=>'@^contact-us$@', 'name'=>'', 'controller'=>'contact-us', 'view'=>'contact-us'],
 ['url'=>'@^contact-us/$@', 'name'=>'', 'controller'=>'contact-us', 'view'=>'contact-us'],
 
+//Admissions
+['url'=>'@^admission$@', 'name'=>'admission', 'controller'=>'admission', 'view'=>'admission'],
+['url'=>'@^admission/$@', 'name'=>'admission', 'controller'=>'admission', 'view'=>'admission'],
+
+//About Us
+['url'=>'@^about-us$@', 'name'=>'aboutus', 'controller'=>'about-us', 'view'=>'about-us'],
+['url'=>'@^about-us/$@', 'name'=>'aboutus', 'controller'=>'about-us', 'view'=>'about-us'],
+
+
 //# controller:aztrasC view:index
 ['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 

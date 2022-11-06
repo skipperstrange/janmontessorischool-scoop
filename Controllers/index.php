@@ -1,3 +1,3 @@
 <?php
 
-$pageTitle = CLIENT_NAME;
+$pageTitle = "Home";

@@ -4,12 +4,10 @@ $navLinks = [
     'home'=>['href'=>  WEB_URL],
     
     'admission' =>[
-      //  'children' => [ 
-      //     'new fire claim' => ['href' => _link('fire-claim','fire-claim')],
-      //     'personal_insurance' => ['href' => _link('products#_personal_lines'),],
-      //     'corporate' => ['href' => _link('products#_corporate'),],
+       'children' => [ 
+           'download_admission_forms' => ['href' => _link('admission-forms')],
       //      'FAQ' => ['href'=> '#']
-      //      ],
+            ],
          'href' => _link('admission'),
     ],
     /*'corporate' =>['href' => [ 
@@ -17,15 +15,15 @@ $navLinks = [
         ],
     ],,
     */
-   // 'quotes' => ['href'=>'https://app.vanguardassurance.com/', 'target'=>'_blank'],
-    'resources' => ['href' => "downloads", 'target'=>'_blank'],
-
-    'about_us' => ['children'=>[
-        'our_story'=>[ 'href'=>_link('about-us','')],
-        //'board_of_directors'=>[ 'href'=>_link('board','')],
-       // 'management'=>[ 'href'=>_link('management','')],
-        'our_team'=>[ 'href'=>_link('team#board','')],
-        ],
+  
+    'about_us' => [
+        'href'=> _link('about-us'),
+        //'children'=>[
+            'our_story'=>[ 'href'=>_link('about-us',''), 'visible'=>false],
+            //'board_of_directors'=>[ 'href'=>_link('board','')],
+        // 'management'=>[ 'href'=>_link('management','')],
+        // 'our_team'=>[ 'href'=>_link('team#board','')],
+        //    ],
     ],
     'news' => ['href'=>_link('articles','')],        
     'contact_us' => ['href'=>_link('contact-us','')],        

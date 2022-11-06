@@ -11,64 +11,69 @@ function generateNavigation($navArray){
         $activeClass = 'active';
     }
     foreach($navArray as $label => $link){
-
-        if(isset($link['target'])){
-            $targetOption = " target='$link[target]'";
-        }
-
-        if(isset($navArray[$label]['children'])){
-            if($navArray[$label]['mega'] == true){
-                $dropdown = "dropdown-mega";
-                $mega_content = "dropdown-mega";
-            }
+        //For links that should not sho. Not really needed but will support other functionalities
+        if($link['visible'] !== false){
             if(isset($link['target'])){
-                $childTargetOption = " target='$link[target]'";
+                $targetOption = " target='$link[target]'";
             }
-
-           $navLinks .= "<li class='dropdown $dropdown'>"; //dropdown-mega
-           $navLinks .= "<a "; 
-           if($navArray[$label]['internal_link'] == true){
-            
-            $navLinks .= "href='#' $childTargetOption ";
-           }else{
-                if(trim($link['href']) != ''){
-                    $navLinks .= "href='$link[href]' $targetOption";
+    
+            if(isset($navArray[$label]['children'])){
+                if($navArray[$label]['mega'] == true){
+                    $dropdown = "dropdown-mega";
+                    $mega_content = "dropdown-mega";
+                }
+                if(isset($link['target'])){
+                    $childTargetOption = " target='$link[target]'";
+                }
+    
+               $navLinks .= "<li class='dropdown $dropdown'>"; //dropdown-mega
+               $navLinks .= "<a "; 
+               if($navArray[$label]['internal_link'] == true){
+                
+                $navLinks .= "href='#' $childTargetOption ";
+               }else{
+                    if(trim($link['href']) != ''){
+                        $navLinks .= "href='$link[href]' $targetOption";
+                    }
+                    else{
+                        $navLinks .= "href='#' ";
+                        }
+                }
+                if(isset($navArray[$label]['label'])){
+                    $linkLabel = $navArray[$label]['label'];
                 }
                 else{
-                    $navLinks .= "href='#' ";
+                    $linkLabel = $label;
+                }
+               $navLinks.= "class='dropdown-item dropdown-toggle'>". format_string($linkLabel) ."</a>";
+               $navLinks .= "<ul class='dropdown-menu'>";
+    
+               foreach($navArray[$label]['children'] as $label => $link){
+                    if($link['visible'] !== false){
+                        $navLinks .= ' <li>
+                        <a href="'.$link['href'].'" class="dropdown-item head-menu-item"  target='.$link['target'].'>'. format_string($label) .'</a>
+                        </li>
+                        ';
                     }
-            }
-            if(isset($navArray[$label]['label'])){
-                $linkLabel = $navArray[$label]['label'];
-            }
-            else{
-                $linkLabel = $label;
-            }
-           $navLinks.= "class='dropdown-item dropdown-toggle'>". format_string($linkLabel) ."</a>";
-           $navLinks .= "<ul class='dropdown-menu'>";
-
-           foreach($navArray[$label]['children'] as $label => $link){
-            $navLinks .= ' <li>
-            <a href="'.$link['href'].'" class="dropdown-item head-menu-item"  target='.$link['target'].'>'. format_string($label) .'</a>
-            </li>
-            ';
-            }
+                }
+                
+               $navLinks .= "
+               </ul>";
             
-           $navLinks .= "
-           </ul>";
-        
-        
-        }else{
-            $navLinks .= "<li class='dropdown '>";
-            if(isset($link['target'])){
-                $navLinks .= " <a class='dropdown-item' href='$link[href]' target='$link[target]'>";
+            
             }else{
-                $navLinks .= " <a class='dropdown-item  head-menu-item' href='$link[href]' target='$link[target]'>";
-            }
-            $navLinks .= format_string($label) ."
-            </a>
-        </li>";
-           }
+                $navLinks .= "<li class='dropdown '>";
+                if(isset($link['target'])){
+                    $navLinks .= " <a class='dropdown-item' href='$link[href]' target='$link[target]'>";
+                }else{
+                    $navLinks .= " <a class='dropdown-item  head-menu-item' href='$link[href]' target='$link[target]'>";
+                }
+                $navLinks .= format_string($label) ."
+                </a>
+            </li>";
+               }
+        }
+       
     }
     return $navLinks;
 } 

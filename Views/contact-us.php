@@ -1,4 +1,18 @@
+
+<?php
+//include_once PARTIALS.'sub-header.php';
+include PARTIALS.'header-jumbo.php';
+?>
 <div class="container">
+    <div class="row">
+        <div class="col-12">
+            
+        <h4 class="pt-5">Get in <strong>Touch</strong></h4>
+            <p class="lead mb-0 text-4">
+                What ever your needs, we are interested to know and always ready to assist you. Just Give us a call or send us a message!
+            </p>
+        </div>
+    </div>
     <div class="row py-4">
         <div class="col-lg-6">
 
@@ -55,8 +69,8 @@
                 <h4 class="mt-2 mb-1">Our <strong>Office</strong></h4>
                 <ul class="list list-icons list-icons-style-2 mt-2">
                     <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Address:</strong> <?= STREET_ADDRESS ?></li>
-                    <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Phone:</strong> <?= SUPPORT_CONTACT_2 ?></li>
-                    <li><i class="fab fa-whatsapp top-6"></i> <strong class="text-dark">Whatsapp:</strong> <?= SUPPORT_CONTACT_1 ?></li>
+                    <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Phone:</strong><a href="<?=SUPPORT_CONTACT_2?>"> <?= SUPPORT_CONTACT_2 ?></a></li>
+                    <li><i class="fab fa-whatsapp top-6"></i> <strong class="text-dark">Whatsapp:</strong> <a href="<?= whatsappUrl(SUPPORT_CONTACT_1)?>"><?= SUPPORT_CONTACT_1 ?></a></li>
                     <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:<?= SUPPORT_EMAIL ?>"><?= SUPPORT_EMAIL ?></a></li>
                 </ul>
             </div>
@@ -69,11 +83,6 @@
                     <li><i class="far fa-clock top-6"></i> Sunday - Closed</li>
                 </ul>
             </div>
-
-            <h4 class="pt-5">Get in <strong>Touch</strong></h4>
-            <p class="lead mb-0 text-4">
-                What ever your needs, our agents are ever ready and available for you. Just Give us a call or send us a message!
-            </p>
 
         </div>
 
